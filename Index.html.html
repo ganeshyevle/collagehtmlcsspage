@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Engineering College</title>
+    <!-- internal styling -->
+    <style>
+       
+
+        html,
+        body {
+            height: 100%;
+            display: block;
+            margin: auto;
+            background: #fff;
+            width: 100%;
+            padding: 0px;
+            clear: both;
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap
+        }
+
+        .logo {
+            flex: 10px;
+        }
+
+        .title {
+            flex: 60%;
+            justify-content: center;
+            padding-top: 20px;
+        }
+
+        .title h1 {
+            size: 10px;
+        }
+
+        nav {
+            background-color: #9f1c33;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom-color 0.2s ease;
+        }
+
+        nav a:hover {
+            border-bottom-color: #333;
+        }
+
+        .main {
+            margin: 0px;
+            height: 2000px;
+        }
+
+        .img img {
+            width: 100%;
+            height: 450px;
+        }
+
+        #about-section h2,
+        #department-section h2,
+        #faculty-section h2,
+        #research-section h2,
+        #placement-section h2,
+        #contact-section h2 {
+            margin-top: 0;
+            text-align: center;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        #about-section {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            height: 630px;
+            margin-top: -23px;
+        }
+
+        #about-section h1 {
+            padding: 30px;
+            text-align: center;
+        }
+
+        #about-section h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        #about-section p {
+            padding: 10px;
+            text-align: justify;
+            line-height: 2.2rem;
+        }
+
+        #about-section hr {
+            width: 50%;
+            border: 1px solid #9f1c33;
+        }
+
+        #about-section img {
+            width: 100%;
+            opacity: 0.5;
+        }
+
+        #department-section {
+            background-color: rgb(254, 254, 254);
+            width: 100%;
+            height: 750px;
+        }
+
+        #department-section h2 {
+            padding: 50px;
+        }
+
+        #department-section hr {
+            width: 25%;
+            border: 1px solid #9f1c33;
+        }
+
+        #department-section p {
+            padding: 20px;
+            margin-top: -50px;
+            text-align: justify;
+            line-height: 2.2rem;
+        }
+
+        #department-section img {
+            width: 100%;
+            padding-top: 20px;
+            opacity: 0.5;
+        }
+
+        .dip-flex {
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            padding: 50px;
+        }
+
+        .verticalLine2 {
+            border-left: 4px solid #9f1c33;
+            height: 290px;
+            right: 70%;
+        }
+
+        .verticalLine1 h3 {
+            text-align: center;
+        }
+
+        .verticalLine2 h3 {
+            text-align: center;
+        }
+
+        .verticalLine1 ul {
+            margin: 10px;
+            font-size: 20px;
+        }
+
+        .verticalLine2 ul {
+            margin: 10px;
+            font-size: 20px;
+        }
+
+        #faculty-section {
+            background: rgb(255, 255, 255);
+            width: 100%;
+            height: 1190px;
+        }
+
+        #faculty-section hr {
+            width: 60%;
+            border: 1px solid #9f1c33;
+        }
+
+        .faculty-p p {
+            padding: 10px;
+            text-align: justify;
+            line-height: 2.2rem;
+        }
+
+        .box {
+            display: flex;
+            padding: 10px;
+            height: 450px;
+        }
+
+        .faculty-member {
+            border-radius: 20px;
+            margin: 10px;
+            padding: 30px;
+            border: 4px solid #9f1c33;
+        }
+
+        .faculty-member p {
+            justify-content: center;
+            text-align: justify;
+        }
+
+        .faculty-member h5 {
+            text-align: center;
+        }
+
+        .faculty-member img {
+            width: 90px;
+            height: 90px;
+            margin-left: 125px;
+        }
+
+        #faculty-section .line img {
+            width: 100%;
+            opacity: 0.5;
+            padding: 40px;
+        }
+
+        #research-section hr {
+            width: 30%;
+            border: 1px solid #9f1c33;
+        }
+
+        #research-section {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            height: 2350px;
+        }
+
+        #research-section p {
+            padding: 10px;
+            text-align: justify;
+            line-height: 2.2rem;
+        }
+
+        #research-section h2 {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .research {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .research img {
+            max-height: 300px;
+            max-width: 120%;
+            border-radius: 50px;
+            padding: 20px;
+            float: left;
+        }
+
+        .research-p {
+            max-width: 50%;
+            max-height: 100%;
+        }
+
+        .research-p h2 {
+            margin-right: 40px;
+        }
+
+        .line img {
+            width: 100%;
+            opacity: 0.5;
+            padding: 40px;
+        }
+
+        #placement-section {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            height: 1350px;
+            padding: 30px;
+        }
+
+        .placement-head p {
+            padding: 10px;
+            text-align: justify;
+            line-height: 2.2rem;
+        }
+
+        .placement-img img {
+            max-width: 100%;
+            border-radius: 80px;
+        }
+
+        .placement-info {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .placement-info h2 {
+            margin-bottom: 10px;
+        }
+
+        .placement-info p {
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .placement-info h3 {
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .placement-info ul {
+            margin-bottom: 18px;
+        }
+
+        .placement-info li {
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .placement-head hr {
+            width: 20%;
+            border: 1px solid #9f1c33;
+        }
+
+        #contact-section {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            height: 320px;
+            padding: 10px;
+        }
+
+        #contact-section p {
+            padding: 3px;
+            text-align: justify;
+            line-height: 2.2rem;
+        }
+
+        #contact-section hr {
+            width: 20%;
+            border: 1px solid #9f1c33;
+        }
+
+        #footer {
+            background: #9f1c33;
+            bottom: 0;
+            width: 100%;
+            height: 185px;
+            padding:20px;
+            margin-top: 50px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/Logo.png" alt="">
+        </div>
+        <div class="title">
+            <h1>DY Patil Institute of Engineering and Technology Ambi, Pune</h1>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about-section">About Us</a></li>
+            <li><a href="#department-section">Department</a></li>
+            <li><a href="#faculty-section">Faculty</a></li>
+            <li><a href="#research-section">Research</a></li>
+            <li><a href="#placement-section">Placement</a></li>
+            <li><a href="#contact-section">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="main">
+        <div class="img">
+            <img src="img/College1.png" alt="">
+        </div>
+        <section id="about-section">
+            <div class="container">
+                <h1>About Us</h1>
+                <h2> DY Patil Institute of Engineering & Technology, Ambi, Pune
+                    <hr>
+                </h2><br>
+                <p> DY Patil Group of Institutions is one of the leading groups of educational institutes in India since
+                    1983. The foundation values of DY Patil Group of Institutions are providing quality education and
+                    contributing to social responsibility. The first DY Patil School of Engineering was established in
+                    Navi Mumbai in the year 1983, and since then they have grown exponentially by laying down the
+                    foundation of several educational institutes. DY Patil Group of Institutions has more than 150
+                    institutes spread across the country that are engaged in providing the best quality education to the
+                    students.
+                    <br><br>
+                    <b> DY Patil Institute of Engineering and Technology Ambi, Pune </b>is engaged in creating the
+                    future
+                    leaders in the field of Engineering, Science and Technology. We aim to build a strong foundation of
+                    engineering principles in our students by encouraging them to collaborate with other disciples and
+                    make them learn to apply these practical skills in real-world problems.
+                    <br><br>
+                    Our campus provides a healthy and student-centric learning culture for our students. Thus, providing
+                    them with the opportunity to understand ‘how,’ things work and ‘find’ their practical application
+                    with the use of scientific processes and theories. Students at <b> DY Patil University Ambi,
+                        Pune</b> are
+                    prepared to perform various engineering functions in the industry such as to design, develop,
+                    modify, and inspect all the different products and systems.
+                </p>
+            </div>
+            <img src="img/line-shadow.png" alt="">
+        </section>
+        <section id="department-section">
+            <div class="head-content">
+                <h2>Departments
+                    <hr>
+                </h2>
+                <p>DY Patil Institute of Engineering & Technology in Ambi, Pune offers graduate and post graduate
+                    programs namely B.E. and M.E. in various branches. These programmes are approved by
+                    AICTE.
+                    DY Patil Institute of Engineering & Technology has departments which are organized according to the
+                    branches. Each department is a hub for academic experience at university and provides state of the
+                    art infrastructure, faculty and laboratories.</p>
+            </div>
+            <div class="dip-flex">
+                <div class="verticalLine1">
+                    <h3>M.E</h3>
+                    <ul>
+                        <li>Computer Science and Engineering</li><br>
+                        <li>Electronics and Communication Engineering</li><br>
+                        <li>Mechanical Engineering</li><br>
+                        <li>Civil Engineering</li><br>
+                        <li>Electrical and Electronics Engineering</li><br>
+                    </ul>
+                </div>
+                <div class="verticalLine2">
+                    <h3>B.E</h3>
+                    <ul>
+                        <li>Computer Science and Engineering</li><br>
+                        <li>Electronics and Communication Engineering</li><br>
+                        <li>Mechanical Engineering</li><br>
+                        <li>Civil Engineering</li><br>
+                        <li>Electrical and Electronics Engineering</li><br>
+                    </ul>
+                </div>
+            </div>
+            <img src="img/line-shadow.png" alt="">
+        </section>
+        <section id="faculty-section">
+            <div class="container">
+                <h2>Computer Science and Engineering faculty
+                    <hr>
+                </h2>
+                <div class="faculty-p">
+                    <p>Our faculty consists of highly qualified and experienced professors who are experts in their
+                        respective fields. They are dedicated to providing our students with the best education and
+                        research
+                        opportunities. Our faculty members are actively involved in research and have published papers
+                        in
+                        reputed journals and conferences.</p>
+                </div>
+                <div class="box">
+                    <div class="faculty-member">
+                        <img src="img/pngwing.com.png" alt="Computer engineering faculty member 1">
+                        <h5>Dr. Alex Kim</h5>
+                        <h5>Associate Professor</h5>
+                        <p>Dr.Alex Kim received his Ph.D. in Computer Engineering from XYZ University. His research
+                            interests include computer architecture and parallel processing. He has published several
+                            papers
+                            in reputed journals and has been awarded numerous research grants. Dr. Kim has over 10 years
+                            of
+                            industry experience and has worked on several high-profile projects, including the design of
+                            a
+                            supercomputer for a major tech company.</p>
+                    </div>
+                    <div class="faculty-member">
+                        <img src="img/pngwing.com.png" alt="Computer engineering faculty member 1">
+                        <h5>&nbsp;&nbsp;&nbsp;&nbsp;Dr. Sarah Lee</h5>
+                        <h5>Assistant Professor</h5>
+                        <p>Dr. Sarah Lee received her Ph.D. in Computer Engineering from ABC University. Her research
+                            interests include digital signal processing and machine learning. She has published several
+                            papers in reputed journals and has been awarded several research grants. Dr. Lee has worked
+                            in
+                            the tech industry for over 5 years and has developed several cutting-edge algorithms for
+                            image
+                            and speech recognition.</p>
+                    </div>
+                    <div class="faculty-member">
+                        <img src="img/pngwing.com.png" alt="Computer engineering faculty member 1">
+                        <h5>Dr. Mark Chen</h5>
+                        <h5>Professor</h5>
+                        <p>Dr.Mark Chen received his Ph.D. in Computer Science from LMN University. His research
+                            interests
+                            include computer networking and security. He has published several papers in reputed
+                            journals
+                            and has been awarded several research grants. Dr. Chen has over 15 years of industry
+                            experience
+                            and has worked on several major projects, including the development of a secure
+                            communication
+                            protocol for a government agency.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="faculty-member">
+                    <img src="img/pngwing.com.png" alt="Computer engineering faculty member 1">
+                    <h5>Dr.Alex Kim</h5>
+                    <h5>Associate Professor</h5>
+                    <p>Dr. Alex Kim received his Ph.D. in Computer Engineering from XYZ University. His research
+                        interests include computer architecture and parallel processing. He has published several papers
+                        in reputed journals and has been awarded numerous research grants. Dr. Kim has over 10 years of
+                        industry experience and has worked on several high-profile projects, including the design of a
+                        supercomputer for a major tech company.</p>
+                </div>
+                <div class="faculty-member">
+                    <img src="img/pngwing.com.png" alt="Computer engineering faculty member 2">
+                    <h5>&nbsp;&nbsp;&nbsp;&nbsp;Dr. Sarah Lee</h5>
+                    <h5>Assistant Professor</h5>
+                    <p>Dr. Sarah Lee received her Ph.D. in Computer Engineering from ABC University. Her research
+                        interests include digital signal processing and machine learning. She has published several
+                        papers in reputed journals and has been awarded several research grants. Dr. Lee has worked in
+                        the tech industry for over 5 years and has developed several cutting-edge algorithms for image
+                        and speech recognition.</p>
+                </div>
+                <div class="faculty-member">
+                    <img src="img/pngwing.com.png" alt="Computer engineering faculty member 3">
+                    <h5>Dr.Mark Chen</h5>
+                    <h5>Professor</h5>
+                    <p>Dr. Mark Chen received his Ph.D. in Computer Science from LMN University. His research interests
+                        include computer networking and security. He has published several papers in reputed journals
+                        and has been awarded several research grants. Dr. Chen has over 15 years of industry experience
+                        and has worked on several major projects, including the development of a secure communication
+                        protocol for a government agency.</p>
+                </div>
+            </div>
+            <div class="line">
+                <img src="img/line-shadow.png" alt="">
+            </div>
+        </section>
+        <section id="research-section">
+            <div class="container">
+                <h2>Research Facilities
+                    <hr>
+                </h2>
+                <p>At Engineering College, we are committed to promoting research and innovation. Our students and
+                    faculty members are involved in a wide range of research projects, from basic research to applied
+                    research. We have state-of-the-art research facilities and equipment to support our research
+                    activities.</p>
+                <div class="research">
+                    <div class="research-img">
+                        <img src="img/computer-screens.jpg" alt="">
+                    </div>
+                    <div class="research-p">
+                        <h2>IT Facilities</h2>
+                        <p>
+                            D Y Patil University emphasizes on the use of IT for teaching and in its operations.
+                            Consequently, it has deployed modern IT hardware, software on campus. Keeping the rapid
+                            obsolescence in IT hardware, software and technologies in mind. University constantly
+                            upgrades
+                            its IT infrastructure.
+                            The faculty uses the computing facilities for teaching and research and for enhancing the
+                            productivity of their operation and providing superior services to the students The
+                            computers
+                            provided to the faculty and staff have been provided with standard office productivity
+                            software
+                            and antivirus.
+                        </p>
+                    </div>
+                </div>
+                <div class="research">
+                    <div class="research-img">
+                        <img src="img/Internet1.jpg" alt="">
+                    </div>
+                    <div class="research-p">
+                        <h2>Internet Facilities</h2>
+                        <p>
+                            D Y Patil University with its Wi-Fi enabled campus uses IT for planning and dissemination of
+                            information. Its helps provide better services to students and better utilization of the
+                            university resources.
+                        </p>
+                    </div>
+                </div>
+                <div class="research">
+                    <div class="research-img">
+                        <img src="img/Computing.jpg" alt="">
+                    </div>
+                    <div class="research-p">
+                        <h2>Computing Facilities</h2>
+                        <p>
+                            The university has more than 3000 plus computers The other hardware in the computer centers
+                            of the University campus includes CD Writers, Data Modems, Scanners, Network Printers, and
+                            Laser Jet Printers. University also has simulation lab.
+                        </p>
+                    </div>
+                </div>
+                <div class="research">
+                    <div class="research-img">
+                        <img src="img/wi-fi.jpg" alt="">
+                    </div>
+                    <div class="research-p">
+                        <h2>New Technology Infrastructure</h2>
+                        <p>
+                            The university has Wi-Fi connectivity on the campus. Students have the options of using
+                            internet access anywhere on the campus. The IT labs are equipped with the latest software
+                            and hardware. The university has 1Gbps Mbps internet bandwidth for the use of students and
+                            faculty. The internet facility has been provided to all the students for their academic and
+                            researches work.
+                        </p>
+                    </div>
+                </div>
+                <div class="research">
+                    <div class="research-img">
+                        <img src="img/Library.jpg" alt="">
+                    </div>
+                    <div class="research-p">
+                        <h2>Library Facilities</h2>
+                        <p>
+                            LibraryFacilities
+                            Libraries in every school has a collection of books as per requirement of regulatory
+                            authorities. It is kept open 9 hours a day.
+                            Library is fully supported by IT infrastructure.
+                            The library has been equipped with the latest software packages, CDs, Videos. etc.
+                            Latest Indian and International Journals, Magazines and Research reports are made available.
+                            D.Y.Patil deemed to be university provides a blended mix of physical and digital mediums to
+                            provide a highly engaging and conducive environment for effective teaching-learning and
+                            progressive academic development. </p>
+                    </div>
+                </div>
+                <div class="research">
+                    <div class="research-img">
+                        <img src="img/GG.jpg" alt="">
+                    </div>
+                    <div class="research-p">
+                        <h2>Classrooms</h2>
+                        <p>
+                            Classrooms
+                            205 class-rooms in the different Colleges of our university retain facilitate a blend of
+                            traditional and modern modes of teaching such as:
+                            Overhead Wi-Fi enabled LCD projectors with Roll-down screens
+                            Podium for faculty members
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="line">
+                <img src="img/line-shadow.png" alt="">
+            </div>
+        </section>
+        <section id="placement-section">
+            <div class="placement-head">
+                <h2>Placement
+                    <hr>
+                </h2>
+                <p>We have a dedicated placement cell that works tirelessly to ensure that our students get placed in
+                    top companies. We have a strong network of industry contacts and our students have been placed in
+                    leading companies in India and abroad. Our placement cell also provides training and career
+                    counseling to our students.
+                </p>
+                <div>
+                    <div class="placement-img">
+                        <img src="img/placementyover1.png" alt="">
+                    </div>
+
+                    <div class="placement-info">
+                        <h2>DYPU - Your Preferred Destination for Recruitment - Introduction</h2>
+                        <p>DYPU is a preferred destination to recruit from, for a large number of companies. We feel
+                            validated in the quality of education and experience we provide to our students when a
+                            majority of our students are successfully placed on campus. Each of our programmes is
+                            designed to give our students a balanced education with theory as well as practical
+                            knowledge. In addition, they are encouraged to participate in extracurricular activities as
+                            it helps them develop soft skills and develop well rounded personalities. It is this that
+                            differentiates our students and makes them a valuable part of any company they join. About
+                            or Nearly 600 students from the DYPU campus sit for placements every semester, of these
+                            almost 100% succeed in securing a job.</p>
+
+                        <h3>Why recruit from DYPU?</h3>
+                        <ul>
+                            <li>World class curriculum and faculty</li>
+                            <li>Students with experience in industry</li>
+                            <li>Balanced personalities</li>
+                            <li>Extracurricular activities</li>
+                        </ul>
+
+                        <h3>Placement Process</h3>
+                        <p>The placement scenario at all our campuses has always been extremely positive; most of our
+                            students have their career paths charted much before graduation. Almost 600 students from
+                            the DYPU campus sit for placements every semester, of these almost 100% succeed in securing
+                            a job. Approximately 300 reputed companies visited our campuses in the previous placement
+                            season 2021 -2022, a number of whom were repeat visitors.</p>
+
+                        <h3>Students' Profiles</h3>
+                        <p>Students from various degree programmes will be available for recruitment during January -
+                            April, from all entire DYPU campus. Students are admitted based on same admission criteria
+                            across the campus. Majority of students will graduate in June.</p>
+                    </div>
+                    <div class="line">
+                        <img src="img/line-shadow.png" alt="">
+                    </div>
+
+        </section>
+        <section id="contact-section">
+            <div class="container">
+                <h2>Contact Us
+                    <hr>
+                </h2>
+                <p>If you have any questions or queries, please feel free to contact us using the information below:</p>
+                <p><strong>Address:</strong> Sr. No-124 & 126 A/p Ambi, MIDC Road, Talegaon Dabhade, Tal- Maval Pune -
+                    410506 Maharashtra, India</p>
+                <p><strong>Phone:</strong> 084484 44230</p>
+                <p><strong>Email:</strong> dypcoe.ambi@gmail.com</p>
+            </div>
+            <div class="line">
+                <img src="img/line-shadow.png" alt="">
+            </div>
+        </section>
+        <div id="footer"><br><br><br>
+            <h2>D Y Patil University</h2>
+            <p>&copy;Copyright Copyright 2023 All Rights Reserved with D Y Patil University</p>
+                
+    </div>
+</body>
+
+</html>
